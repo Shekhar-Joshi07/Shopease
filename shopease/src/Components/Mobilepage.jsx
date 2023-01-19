@@ -3,12 +3,19 @@ import axios from "axios";
 import MobileCart from './MobileCart';
 import { Box, Flex, Grid } from '@chakra-ui/react';
 import MobileSidebar from './MobileSidebar';
+import { useLocation, useSearchParams } from 'react-router-dom';
 
 const Mobilepage = () => {
+    const location = useLocation();
+    const [searchParams] = useSearchParams();
     const [mobiledata, setMobiledata] = useState([]);
 
     const getData = () =>{
-        axios.get("https://shopease-5vqg.onrender.com/mobileData").then((res) =>{
+        axios.get("https://shopease-5vqg.onrender.com/mobileData",{
+          params : {
+            brand : searchParams.getAll("brand")
+           }
+        }).then((res) =>{
             console.log(res.data);
             setMobiledata(res.data);
         }).catch((err) =>{
@@ -18,7 +25,8 @@ const Mobilepage = () => {
 
     useEffect(()=>{
       getData();
-    },[])
+    },[location.search]);
+    
   return (
        <Flex justifyContent="space-evenly" gap={4}>
          <MobileSidebar />

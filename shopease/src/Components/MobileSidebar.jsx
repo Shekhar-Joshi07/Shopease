@@ -4,42 +4,42 @@ import { useSearchParams } from 'react-router-dom';
 
 const MobileSidebar = () => {
     const [searchParams, setSearchParams] = useSearchParams();
-    const initialState = searchParams.getAll("category");
-    const [category, setCategory] = useState(initialState || []);
+    const initialState = searchParams.getAll("brand");
+    const [brand, setBrand] = useState(initialState || []);
 
-    console.log(category)
+    console.log(brand);
  
 
   const handlefilter = (e) =>{
-        const newCategory = [...category];
+        const newBrand = [...brand];
         // if category is not present push into newCategory
         // if category present splice it
-        if(newCategory.includes(e.target.value)){
-          newCategory.splice(newCategory.indexOf(e.target.value), 1);
+        if(newBrand.includes(e.target.value)){
+            newBrand.splice(newBrand.indexOf(e.target.value), 1);
         }
         else{
-          newCategory.push(e.target.value);
+            newBrand.push(e.target.value);
         }
-        setCategory(newCategory);
+        setBrand(newBrand);
   }
 
   useEffect(()=>{
     const params ={
-     category,
+     brand,
     }
     setSearchParams(params);
- },[category])
+ },[brand])
 
   return (
     <Box w="20%" boxShadow='xs'>
           <h3>Category Filter</h3>
           <Box>
-            <h4>Price</h4>
+            <h4>Brand</h4>
             <Stack pl={6} mt={1} spacing={1}>
-              <Checkbox value="MTR" onChange={handlefilter} checked={category.includes("MTR")}>MTR</Checkbox>
-              <Checkbox value="Pear" onChange={handlefilter} checked={category.includes("Pear")}>Pear</Checkbox>
-              <Checkbox value="Nokia" onChange={handlefilter} checked={category.includes("Nokia")}>Nokia</Checkbox>
-              <Checkbox value="Angage" onChange={handlefilter} checked={category.includes("Angage")}>Angage</Checkbox>
+              <Checkbox value="MTR" onChange={handlefilter} checked={brand.includes("MTR")}>MTR</Checkbox>
+              <Checkbox value="Pear" onChange={handlefilter} checked={brand.includes("Pear")}>Pear</Checkbox>
+              <Checkbox value="Nokia" onChange={handlefilter} checked={brand.includes("Nokia")}>Nokia</Checkbox>
+              <Checkbox value="Angage" onChange={handlefilter} checked={brand.includes("Angage")}>Angage</Checkbox>
             </Stack>
           </Box>
         </Box>
