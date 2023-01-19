@@ -2,11 +2,11 @@ import { Box, Grid, Heading } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 import ProductCard from "./ProductCard";
 import axios from "axios";
-const DealsOfTheDay = () => {
+const YourGadgetsStore = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
     axios
-      .get("https://shopease-5vqg.onrender.com/Deals_of_the_Day")
+      .get("https://shopease-5vqg.onrender.com/Your_Gadgets_Store")
       .then((res) => setData(res.data))
       .catch((e) => console.log("error is", e));
   }, []);
@@ -14,7 +14,7 @@ const DealsOfTheDay = () => {
   return (
     <Box>
       <Heading ml={"2%"} size={"lg"}>
-        Deals of the Day
+        Your Gadgets Store
       </Heading>
       <Grid
         templateColumns={{
@@ -38,4 +38,4 @@ const DealsOfTheDay = () => {
   );
 };
 
-export default DealsOfTheDay;
+export default YourGadgetsStore;
