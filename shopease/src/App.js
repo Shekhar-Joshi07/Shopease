@@ -1,11 +1,9 @@
-import "./App.css";
-
-import Imagecarousel from "./Components/Imagecarousel";
+import DealsOfTheDay from "./Components/DealsOfTheDay";
 
 function App() {
   return (
     <div className="App">
-      <Imagecarousel />
+      <DealsOfTheDay />
     </div>
   );
 }
