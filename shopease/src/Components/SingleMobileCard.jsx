@@ -1,19 +1,31 @@
-import { Box, Button, Flex, ListItem, Text, UnorderedList } from '@chakra-ui/react';
+import { Box, Button, Flex, List, ListIcon, ListItem, Text, UnorderedList } from '@chakra-ui/react';
 import axios from 'axios';
 import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom';
+import { MdCheckCircle} from "react-icons/md";
 
 const SingleMobileCard = () => {
+  const navigate = useNavigate();
+    const [cartdata, setCartdata] = useState([]);
     const [mobdata, setMobdata] = useState({});
     const { id } = useParams();
     console.log(id);
+
+    const handleAddCard = () =>{
+      navigate("/cart")
+    }
+
+    console.log(cartdata);
 
     useEffect(() =>{
       axios.get(`https://shopease-5vqg.onrender.com/mobileData/${id}`).then((res) =>{
         console.log(res.data);
         setMobdata(res.data);
+        const newmobdata = [];
+        newmobdata.push(res.data);
+        setCartdata(newmobdata);
       }).catch((err) =>{
         console.log("Error feching Data");
       })
@@ -37,9 +49,23 @@ const SingleMobileCard = () => {
               <ListItem>Warranty Available : Manufacturer Warranty</ListItem>
             </UnorderedList>
             <Flex gap={5}>
-            <Button px="3rem" py="1.5rem" color="#ff7856" colorScheme='#ff7856' variant='outline'>ADD TO CART</Button>
+            <Button onClick={handleAddCard} px="3rem" py="1.5rem" color="#ff7856" colorScheme='#ff7856' variant='outline'>ADD TO CART</Button>
             <Button px="3rem" py="1.5rem" color="white"  bgColor="#ff7856" variant='solid'>BUY NOW</Button>
             </Flex>
+            <List>
+              <ListItem>
+              <ListIcon as={MdCheckCircle} color='green.500' />
+                COD Available
+              </ListItem>
+              <ListItem>
+              <ListIcon as={MdCheckCircle} color='green.500' />
+                Free Shipping
+              </ListItem>
+              <ListItem>
+              <ListIcon as={MdCheckCircle} color='green.500' />
+                Delivered 2-5 Business Days
+              </ListItem>
+            </List>
         </Box>
     </Flex>
   )
