@@ -1,12 +1,14 @@
 import { Box, Grid, Heading } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
-import ProductCard from "./ProductCard";
+
 import axios from "axios";
-const YourGadgetsStore = () => {
+import DailyEssentailsProductCards from "./DailyEssentailsProductCards";
+const DailyEssentails = () => {
   const [data, setData] = useState([]);
+
   useEffect(() => {
     axios
-      .get("https://shopease-5vqg.onrender.com/Your_Gadgets_Store")
+      .get("https://shopease-5vqg.onrender.com/Daily_Essentials")
       .then((res) => setData(res.data))
       .catch((e) => console.log("error is", e));
   }, []);
@@ -14,7 +16,7 @@ const YourGadgetsStore = () => {
   return (
     <Box mt={"30px"} ml={"1%"} mr={"1%"}>
       <Heading mb={"15px"} size={"md"}>
-        Your Gadgets Store
+        Daily Essentials
       </Heading>
       <Grid
         templateColumns={{
@@ -24,13 +26,11 @@ const YourGadgetsStore = () => {
         }}
       >
         {data.map((e) => (
-          <ProductCard
+          <DailyEssentailsProductCards
             key={e.id}
-            title={e.title}
+            category={e.category}
             price={e.price}
-            real_price={e.real_price}
             image={e.image}
-            discount={e.discount_off}
           />
         ))}
       </Grid>
@@ -38,4 +38,4 @@ const YourGadgetsStore = () => {
   );
 };
 
-export default YourGadgetsStore;
+export default DailyEssentails;

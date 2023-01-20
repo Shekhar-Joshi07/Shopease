@@ -12,8 +12,8 @@ const DealsOfTheDay = () => {
   }, []);
   console.log(data);
   return (
-    <Box>
-      <Heading ml={"2%"} size={"lg"}>
+    <Box mt={"30px"} ml={"1%"} mr={"1%"}>
+      <Heading mb={"15px"} size={"md"}>
         Deals of the Day
       </Heading>
       <Grid

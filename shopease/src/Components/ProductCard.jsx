@@ -1,24 +1,28 @@
 import React from "react";
 import { Image, Text, HStack, VStack, Flex } from "@chakra-ui/react";
 const Product_card = ({ image, title, price, real_price, discount }) => {
-  console.log(image);
+  // console.log(image);
   return (
     <VStack
-      // _hover={{ bg: "teal.600" }}
-      // w={"200px"}
-      h={"200px"}
+      _hover={{ border: "1px solid #24a3b5" }}
       fontFamily={"Roboto, Arial, Helvetica, sans-serif"}
       padding={3}
+      pt={6}
+      pb={10}
+      bg={"white"}
+      alignContent={"flex-start"}
+      justifyContent={"left"}
+      textAlign={"left"}
     >
       <Image
         _hover={{ transform: "scale(1.1)" }}
-        w={"200px"}
-        h={"200px"}
+        w={"190px"}
+        h={"180px"}
         src={image}
         alt={title}
       />
 
-      <Flex width="150px" mt={20}>
+      <Flex justifyContent={"left"} width="190px" mt={20}>
         <Text
           overflow="hidden"
           whiteSpace="nowrap"

@@ -1,12 +1,9 @@
-import DealsOfTheDay from "./Components/DealsOfTheDay";
-import YourGadgetsStore from "./Components/YourGadgetsStore";
+import Home from "./Pages/Home";
 
 function App() {
   return (
     <div className="App">
-      <DealsOfTheDay />
-
-      <YourGadgetsStore />
+      <Home />
     </div>
   );
 }
