@@ -1,0 +1,92 @@
+.navbar{
+    border: 1px solid transparent;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+}
+
+.navbar>div{
+    display: flex;
+    align-items: center;
+}
+
+
+.navbar>div>input{
+    
+    width:60%;
+    background-color: #E9F6F7;
+    margin-right: 170px;
+  
+}
+
+
+.navbar>div:nth-child(1){
+    width: 20%;
+    
+}
+
+
+.navbar>div:nth-child(2){
+    width: 40%;
+    background-color: #E9F6F7;
+    height: 40px;
+    align-items: center;
+    margin-top: 20px;
+    border-radius: 3px;
+    
+
+    
+}
+
+.navbar>div:nth-child(2)>button{
+    background-color:#FF8650;
+    color: white;
+    padding: 5px 25px;
+    height: 100%;
+    border-radius: 3px;
+}
+
+.navbar>div:nth-child(3){
+width: 20%;
+justify-content: space-evenly;
+}
+
+
+.subnav1{
+    height: 50px;
+    width: 100%;
+    background-color: #24A3B5;
+    display: flex;
+    
+}
+
+
+.subnav1>div{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    gap: 20px;
+}
+
+.subnav1>div>span{
+font-size: small;
+color: white;
+padding: 13px 5px;
+}
+
+.subnav1>img{
+    margin-left: 200px;
+    margin-right: 20px;
+ margin-top: 5px;
+    height: 40px;
+}
+
+.subnav1>div>span:hover{
+
+    background-color: white;
+    color: teal;
+
+}
