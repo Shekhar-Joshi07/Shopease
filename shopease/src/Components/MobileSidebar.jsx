@@ -31,7 +31,7 @@ const MobileSidebar = () => {
  },[brand])
 
   return (
-    <Box w="20%" boxShadow='xs'>
+    <Box w="20%" boxShadow='xs' bg="white">
           <h3>Category Filter</h3>
           <Box>
             <h4>Brand</h4>

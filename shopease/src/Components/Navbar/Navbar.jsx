@@ -5,6 +5,10 @@ import {IoMdHeartEmpty} from "react-icons/io"
 import {Box, HStack} from "@chakra-ui/react"
 import {Search2Icon  } from '@chakra-ui/icons'
 
+import SearchComp from "../SearchComp"
+// import {Search2Icon  } from '@chakra-ui/icons'
+import { FcLike } from "react-icons/fc";
+
 import Signup from '../Signup';
 
 
@@ -25,9 +29,15 @@ alt="" />
 
 {/* div for input taking  and search button*/}
 
-
 <div>
 
+
+  <SearchComp />
+</div>
+ 
+{/* <FaSistrix /> */}
+{/* <div>
+>>>>>>> 44db061b6eff9378ec855128af684f3e1482f14f
 
 <Search2Icon  marginRight={3} bg="#E9F6F7"  ml={2}/>
 
@@ -35,7 +45,7 @@ alt="" />
 
 
 <button >Search</button>
-</div>
+</div> */}
 
 
 

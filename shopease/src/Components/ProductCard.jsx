@@ -1,9 +1,14 @@
 import React from "react";
 import { Image, Text, HStack, VStack, Flex } from "@chakra-ui/react";
-const Product_card = ({ image, title, price, real_price, discount }) => {
+import { useNavigate } from "react-router";
+const ProductCard = ({id, image, title, price, real_price, discount }) => {
+
+  const navigate = useNavigate();
   // console.log(image);
+  console.log(id);
   return (
     <VStack
+      onClick={() => navigate(`/deal/${id}`)}
       _hover={{ border: "1px solid #24a3b5" }}
       fontFamily={"Roboto, Arial, Helvetica, sans-serif"}
       padding={3}
@@ -22,7 +27,7 @@ const Product_card = ({ image, title, price, real_price, discount }) => {
         alt={title}
       />
 
-      <Flex justifyContent={"left"} width="190px" mt={20}>
+      <Flex justifyContent={"left"} width="150px" mt={20}>
         <Text
           overflow="hidden"
           whiteSpace="nowrap"
@@ -49,4 +54,4 @@ const Product_card = ({ image, title, price, real_price, discount }) => {
   );
 };
 
-export default Product_card;
+export default ProductCard;
