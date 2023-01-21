@@ -1,10 +1,12 @@
 import React from 'react';
 // import { FaSistrix } from "react-icons/fa";
 import { IoLocationOutline ,IoNotificationsOutline,IoCartOutline} from "react-icons/io5";
-
+import {IoMdHeartEmpty} from "react-icons/io"
+import {Box, HStack} from "@chakra-ui/react"
 import {Search2Icon  } from '@chakra-ui/icons'
-import { FcLike } from "react-icons/fc";
+
 import Signup from '../Signup';
+
 
 import './Navbar.Module.css';
 
@@ -25,7 +27,7 @@ alt="" />
 
 
 <div>
-{/* <FaSistrix /> */}
+
 
 <Search2Icon  marginRight={3} bg="#E9F6F7"  ml={2}/>
 
@@ -37,25 +39,29 @@ alt="" />
 
 
 
-<div>
+<Box  >
 
 
   {/* icons div */}
 
+<HStack spacing={5}>
+<IoLocationOutline size={25} color='teal'/>
+<IoNotificationsOutline size={25} color='teal'  />
+<IoMdHeartEmpty color='red' size={25}  />
+<IoCartOutline   size={25} color='teal'/>
+<Signup/>
+</HStack>
 
 
-<IoLocationOutline size={30} color='teal'/>
-<IoNotificationsOutline size={30} color='teal'  />
-<FcLike  size={30}  />
-<IoCartOutline   size={30} color='teal'/>
 
 
 {/* button for signin.... */}
 
-<Signup/>
 
 
-</div>
+
+</Box>
+
 
 
 
