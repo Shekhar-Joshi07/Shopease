@@ -21,8 +21,8 @@ const DealsOfTheDay = () => {
   }, []);
   // console.log(data);
   return (
-    <Box mt={"30px"} ml={"1%"} mr={"1%"}>
-      <Heading mb={"15px"} size={"md"}>
+    <Box mt={"30px"} ml={"1%"} mr={"1%"} overflow={"hidden"}>
+      <Heading mb={"15px"} mt={"30px"} size={"md"}>
         Deals of the Day
       </Heading>
       {loading ? (

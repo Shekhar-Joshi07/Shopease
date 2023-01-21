@@ -20,7 +20,7 @@ const YourGadgetsStore = () => {
   }, []);
 
   return (
-    <Box mt={"30px"} ml={"1%"} mr={"1%"}>
+    <Box mt={"30px"} ml={"1%"} mr={"1%"} overflow={"hidden"}>
       <Heading mb={"15px"} size={"md"}>
         Your Gadgets Store
       </Heading>

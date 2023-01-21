@@ -1,10 +1,10 @@
 import React from "react";
-import { Image, Text, VStack, Flex, Box } from "@chakra-ui/react";
+import { Image, Text, VStack, Flex, Box, HStack } from "@chakra-ui/react";
 
 const FestiveSpecialsCards = ({ image, category, price }) => {
   // console.log(image);
   return (
-    <Box
+    <HStack
       display={"flex"}
       flexDirection="column"
       _hover={{ border: "1px solid #24a3b5" }}
@@ -25,7 +25,7 @@ const FestiveSpecialsCards = ({ image, category, price }) => {
         />
       </VStack>
 
-      <Flex justifyContent={"left"} width="210px" mt={5}>
+      <HStack mt={5}>
         <Text
           overflow="hidden"
           whiteSpace="nowrap"
@@ -38,10 +38,10 @@ const FestiveSpecialsCards = ({ image, category, price }) => {
         <Text as="span" fontSize="sm" color="gray.500" ml={1}>
           ...
         </Text>
-      </Flex>
+      </HStack>
 
       <Text fontSize={"16px"}>{price}</Text>
-    </Box>
+    </HStack>
   );
 };
 
