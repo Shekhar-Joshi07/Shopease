@@ -90,3 +90,26 @@ padding: 13px 5px;
     color: teal;
 
 }
+
+
+
+
+.subnav3{
+    width: 90%;
+    height: 30px;
+    margin: auto;
+    gap: 10px;
+    border: 1px solid transparent;
+}
+
+
+.subnav3>span{
+    color: grey;
+    font-size: small;
+    margin-right: 15px;
+}
+
+.subnav3>span:hover{
+color: #24A3B5;
+cursor: pointer;
+}
