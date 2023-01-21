@@ -15,7 +15,7 @@ export const Navbar = () => {
   <div className='navbar' >
 
 <div>
-<img src="" 
+<img src="https://iili.io/HcHUepe.png" 
 alt="" />
 </div>
 

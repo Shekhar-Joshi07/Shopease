@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react';
 import { useState } from 'react';
 import './Curosel.Module.css';
 
@@ -37,8 +38,20 @@ const [ind,setIndex]=useState(0);
 ]
 
 
-const hoverhandler=()=>{
-    
+// setInterval(()=>{
+//         if(ind===imgobj.length-1){
+//     setIndex(0);
+//         }else{
+//             setIndex(ind+1);
+//             console.log(ind);
+//         }
+//     },2500);
+
+   
+
+
+const hoverhandler=(num)=>{
+    setIndex(num);
 }
 
 
@@ -57,24 +70,24 @@ alt="" />
 
 
 <div className='hovercontrol'>
-    <h3 on>
+    <h3 onMouseEnter={()=>hoverhandler(0)}>
         Shopease Anniversary Sale
     </h3>
 
-    <h3>
+    <h3 onMouseEnter={()=>hoverhandler(1)}>
         Men's Blue jacket
     </h3>
 
-    <h3>
+    <h3 onMouseEnter={()=>hoverhandler(2)}>
         BlockBuster deals
     </h3>
 
 
-<h3>
+<h3 onMouseEnter={()=>hoverhandler(3)}>
     Jdd
 </h3>
 
-<h3>
+<h3 onMouseEnter={()=>hoverhandler(4)}>
     Intel
 </h3>
 

@@ -11,14 +11,24 @@
 .navbar>div{
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
+
+.navbar>div>img{
+    width: 45%;
+    height: 100%;
+    margin-left: 60px;
+
+}
 
 .navbar>div>input{
     
     width:60%;
     background-color: #E9F6F7;
     margin-right: 170px;
+   
+    border: none;
   
 }
 
