@@ -1,5 +1,6 @@
 import { Box, Heading } from "@chakra-ui/react";
 import React from "react";
+import Budget_Bazaar from "../Components/Budget_Bazaar";
 import DailyEssentails from "../Components/DailyEssentials";
 import DealsOfTheDay from "../Components/DealsOfTheDay";
 import FestiveSpecials from "../Components/FestiveSpecials";
@@ -17,6 +18,7 @@ const Home = () => {
       <PrimeMall />
       <FestiveSpecials />
       <TrendingFashionZone />
+      <Budget_Bazaar />
     </Box>
   );
 };
