@@ -27,8 +27,8 @@ const Footer = () => {
   return (
    <>
    <hr />
-   <Box  w="100%" h="200px" d="flex" flexDirection={{base:"column",md:"row",lg:"row"}}  >
-    <Heading as="h3" fontSize="21px" color="#555555" >Band Of Trust</Heading>
+   <Box mt={4}  w="100%" h="200px" d="flex" flexDirection={{base:"column",md:"row",lg:"row"}}  >
+    <Heading as="h3" fontSize="21px" color="#555555" textAlign="center" >Band Of Trust</Heading>
     <Grid templateColumns='repeat(3, 1fr)' display="flex" justifyContent="space-around" alignItems="center"  >  
      <Box pt="7px" mt="20px"   w="200px" height="120px" 
    

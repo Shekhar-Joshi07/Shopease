@@ -11,7 +11,6 @@ import YourGadgetsStore from "../Components/YourGadgetsStore";
 const Home = () => {
   return (
     <Box bg={"#eef6f9"}>
-      <Heading>Home</Heading>
       <DealsOfTheDay />
       <YourGadgetsStore />
       <DailyEssentails />
