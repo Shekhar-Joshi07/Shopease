@@ -4,6 +4,7 @@ import { IoLocationOutline ,IoNotificationsOutline,IoCartOutline} from "react-ic
 
 import {Search2Icon  } from '@chakra-ui/icons'
 import { FcLike } from "react-icons/fc";
+import Signup from '../Signup';
 
 import './Navbar.Module.css';
 
@@ -51,9 +52,7 @@ alt="" />
 
 {/* button for signin.... */}
 
-<button>
-  SignIn
-</button>
+<Signup/>
 
 
 </div>
