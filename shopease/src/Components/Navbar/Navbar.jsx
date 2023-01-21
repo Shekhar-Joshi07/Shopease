@@ -1,8 +1,8 @@
 import React from 'react';
 // import { FaSistrix } from "react-icons/fa";
 import { IoLocationOutline ,IoNotificationsOutline,IoCartOutline} from "react-icons/io5";
-
-import {Search2Icon  } from '@chakra-ui/icons'
+import SearchComp from "../SearchComp"
+// import {Search2Icon  } from '@chakra-ui/icons'
 import { FcLike } from "react-icons/fc";
 import Signup from '../Signup';
 
@@ -23,9 +23,12 @@ alt="" />
 
 {/* div for input taking  and search button*/}
 
-
 <div>
+  <SearchComp />
+</div>
+ 
 {/* <FaSistrix /> */}
+{/* <div>
 
 <Search2Icon  marginRight={3} bg="#E9F6F7"  ml={2}/>
 
@@ -33,7 +36,7 @@ alt="" />
 
 
 <button >Search</button>
-</div>
+</div> */}
 
 
 

@@ -1,7 +1,7 @@
 import { Box, Image, Grid, Heading } from "@chakra-ui/react";
 import React from "react";
 
-const Budget_Bazaar = () => {
+const BudgetBazaar = () => {
   return (
     <Box ml="1%" mr="1%" mt="30px">
       <Heading mb="15px" size={"md"}>
@@ -50,4 +50,4 @@ const Budget_Bazaar = () => {
   );
 };
 
-export default Budget_Bazaar;
+export default BudgetBazaar;
