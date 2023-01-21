@@ -27,7 +27,7 @@ const ProductCard = ({id, image, title, price, real_price, discount }) => {
         alt={title}
       />
 
-      <Flex justifyContent={"left"} width="190px" mt={20}>
+      <Flex justifyContent={"left"} width="150px" mt={20}>
         <Text
           overflow="hidden"
           whiteSpace="nowrap"
