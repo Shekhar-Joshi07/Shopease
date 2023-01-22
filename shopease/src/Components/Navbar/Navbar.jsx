@@ -50,9 +50,13 @@ export const Navbar = () => {
     
   <div className='navbar' >
 
-<div>
-<img src="https://iili.io/HcHUepe.png" alt="logo" />
-</div>
+
+  <div>
+    <Link to="/">
+      <img src="https://iili.io/HcHUepe.png" alt="logo" />
+    </Link>
+  </div>
+
 
 
 {/* div for input taking  and search button*/}

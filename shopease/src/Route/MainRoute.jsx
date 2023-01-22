@@ -7,6 +7,7 @@ import Home from '../Pages/Home'
 import SingleHomeCard from './SingleHomeCard'
 import Cart from './Cart'
 import Payment from '../Pages/Payment'
+import Success from '../Pages/Success'
 
 const MainRoute = () => {
   return (
@@ -17,7 +18,8 @@ const MainRoute = () => {
             <Route path='/mobile/:id' element={<SingleMobileCard />} /> 
             <Route path="/deal/:id" element={<SingleHomeCard />} />
             <Route path="/cart" element={<Cart />} />
-            <Route path="/payment" element={<Payment />} />
+            <Route path="/cart/payment" element={<Payment />} />
+            <Route path="/cart/payment/success" element={<Success />} />
         </Routes>
     </div>
   )

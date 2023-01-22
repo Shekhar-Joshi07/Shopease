@@ -7,6 +7,8 @@ import {
     Input,
     Select,
     useDisclosure,
+    Alert,
+    AlertIcon,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -50,10 +52,14 @@ const Payment = () => {
 
     const navigate = useNavigate();
 
-    const handleSuccess = () => {
-    
-        navigate("/success");
-    };
+   
+
+    const handleproceed = () =>{
+        setTimeout(() =>{
+           navigate("/cart/payment/success");
+        },2000);
+
+    }
 
     return (
         <>
@@ -270,13 +276,12 @@ const Payment = () => {
                                                     <Box></Box>
                                                 ) : (
                                                     <Button
-                                                        onClick={() => handleSuccess()}
                                                         mt={3}
                                                         mr={0}
                                                         bg={"#24AEB1"}
                                                         color={"white"}
                                                     >
-                                                        PAY Rs
+                                                        SAVE CARD
                                                     </Button>
                                                 )}
                                             </Box>
@@ -525,7 +530,7 @@ const Payment = () => {
                             p={5}
                             pr={8}
                             width={470}
-                            height={"300px"}
+                            height={"260px"}
                         >
                             <Text mb={1} color={"grey"} fontSize={"sm"}>
                                 PAYMENT DETAILS
@@ -537,7 +542,7 @@ const Payment = () => {
                                 display={"flex"}
                             >
                                 <Text> MRP Total</Text>
-                                <Text>Rs,</Text>
+                                <Text>Rs 3745.00</Text>
                             </Box>
                             <Box
                                 fontSize={"sm"}
@@ -545,8 +550,8 @@ const Payment = () => {
                                 justifyContent={"space-between"}
                                 display={"flex"}
                             >
-                                <Text> Nedmeds Discount</Text>
-                                <Text>-Rs,75.00</Text>
+                                <Text>Discount</Text>
+                                <Text>-Rs 00.00</Text>
                             </Box>
                             <Box
                                 fontSize={"sm"}
@@ -556,39 +561,27 @@ const Payment = () => {
                                 display={"flex"}
                             >
                                 <Text>Total Amount*</Text>
-                                <Text>Rs,</Text>
+                                <Text>Rs 3745.00</Text>
                             </Box>
-                            <Box
-                                bg={"#F3F8EC"}
-                                p={2}
-                                fontWeight={500}
-                                fontSize={"smaller"}
-                                mt={3}
-                                justifyContent={"space-between"}
-                                display={"flex"}
-                            >
-                                <Text pl={4} color={"green"}>
-                                    TOTAL SAVINGS Rs.75
-                                </Text>
-                            </Box>
+                            
 
                             <Box
                                 p={2}
                                 fontWeight={500}
                                 bg={"white"}
-                                mt={0}
+                                mt={5}
                                 justifyContent={"space-between"}
                                 display={"flex"}
                             >
                                 <Box>
                                     <Text fontSize={"xs"}>TOTAL AMOUNT </Text>
-                                    <Text fontSize={"larger"}>Rs</Text>
+                                    <Text fontSize={"larger"}>Rs 3745.00</Text>
                                 </Box>
 
                                 <Box>
                                     <Link to="/cart/payment">
                                         {" "}
-                                        <Button size={"lg"}>PROCEED</Button>{" "}
+                                        <Button onClick={handleproceed} bg="#ff7856" color="white" size={"lg"}>PROCEED</Button>{" "}
                                     </Link>
                                 </Box>
                             </Box>

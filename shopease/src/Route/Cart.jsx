@@ -52,7 +52,7 @@ const Cart = () => {
       <Box textAlign="right" p="1rem">
         <Text fontSize='2xl'>Cart Total : {totalcost}</Text>
         <Text fontSize="2xs">Inclusive of all the applicable taxes</Text>
-        <Button onClick={() => navigate("/payment")} w="10%" m="1rem 0 1rem 1rem" p="1rem" color="white" bg="#ff7856">Place Order</Button>
+        <Button onClick={() => navigate("/cart/payment")} w="10%" m="1rem 0 1rem 1rem" p="1rem" color="white" bg="#ff7856">Place Order</Button>
       </Box>
     </Box>
    )

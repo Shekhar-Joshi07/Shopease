@@ -18,11 +18,10 @@
 }
 
 
-.navbar>div>img{
+.navbar>div>a>img{
     width: 120px;
     height: 100%;
     margin-left: 60px;
-
 }
 
 /* .navbar>div>input{
