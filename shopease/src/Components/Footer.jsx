@@ -132,7 +132,7 @@ Easy Returns & Replacement</Link>
       </Box>
     </Box>
     
-    <Box pr="20px" pl="20px" width="100%" h="100px"  display="flex" justifyContent="space-between" alignItems="center"  >
+    <Box pr="20px" pl="20px" width="100%" h="100px"  display="flex" flexDirection={{base:"column",md:"row",lg:"row"}} justifyContent="space-between" alignItems="center"  >
       <Box w="300px" >
       <Heading s="h3" fontSize="16px" mb={3}>Keep In Touch</Heading>
       <HStack spacing={4} >
@@ -148,7 +148,7 @@ Easy Returns & Replacement</Link>
 
       <Box w="600px"  >
       <Heading s="h3" fontSize="16px" mb={3} textAlign="start">
-100% Secure and Trusted Payment</Heading>
+      100% Secure and Trusted Payment</Heading>
       <HStack>
       <Image src="https://images.shopclues.com/images/ui/pgateway_dkt@2x.png" />
       </HStack>

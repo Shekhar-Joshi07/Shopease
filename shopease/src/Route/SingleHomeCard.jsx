@@ -1,4 +1,4 @@
-import { Box, Button, Flex, List, ListIcon, ListItem, Text, UnorderedList } from '@chakra-ui/react';
+import { Box, Flex, List, ListIcon, ListItem, Text, UnorderedList } from '@chakra-ui/react';
 import axios from 'axios';
 import React from 'react'
 import { useEffect } from 'react';
@@ -30,7 +30,7 @@ const SingleHomeCard = () => {
 
   return (
     <Box bg={"#eef6f9"} p="2rem">
-      <Flex alignItems="center" w="92rem"  bg="white">
+      <Flex alignItems="center"   bg="white">
         <Box w="60%">
             <img width="70%" src={deal.image} alt={deal.id} />
         </Box>
@@ -46,9 +46,27 @@ const SingleHomeCard = () => {
               <ListItem>Warranty Available : Manufacturer Warranty</ListItem>
             </UnorderedList>
             <Flex gap={5}>
-            <Button onClick={handleCart} px="3rem" py="1.5rem" color="#ff7856" colorScheme='#ff7856' variant='outline'>ADD TO CART</Button>
-            <Button px="3rem" py="1.5rem" color="white"  bgColor="#ff7856" variant='solid'>BUY NOW</Button>
-            </Flex>
+            <button 
+            style={{
+              color:"#ff7856" ,
+                width:"200px",
+                height:"50px",
+                backgroundColor:"white",
+                borderRadius:"10px",
+                border:"2px solid #ff7856"
+
+            }}
+            
+            onClick={handleCart}>ADD TO CART</button>
+            <button style={{
+              color:"white" ,
+                width:"200px",
+                height:"50px",
+                backgroundColor:"#ff7856",
+                borderRadius:"10px"
+
+            }}>BUY NOW</button>
+            </Flex> 
             <List>
               <ListItem>
               <ListIcon as={MdCheckCircle} color='green.500' />

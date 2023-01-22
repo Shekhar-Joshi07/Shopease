@@ -1,13 +1,14 @@
-import { Box, Checkbox, Stack } from '@chakra-ui/react'
+import { Box, Checkbox, Stack,Text } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-
+import {FaFilter} from "react-icons/fa"
+import {GoDeviceMobile} from "react-icons/go"
 const MobileSidebar = () => {
     const [searchParams, setSearchParams] = useSearchParams();
     const initialState = searchParams.getAll("brand");
     const [brand, setBrand] = useState(initialState || []);
 
-    console.log(brand);
+    // console.log(brand);
  
 
   const handlefilter = (e) =>{
@@ -31,15 +32,19 @@ const MobileSidebar = () => {
  },[brand])
 
   return (
-    <Box w="20%" boxShadow='xs' bg="white">
-          <h3>Category Filter</h3>
-          <Box>
-            <h4>Brand</h4>
-            <Stack pl={6} mt={1} spacing={1}>
-              <Checkbox value="MTR" onChange={handlefilter} checked={brand.includes("MTR")}>MTR</Checkbox>
-              <Checkbox value="Pear" onChange={handlefilter} checked={brand.includes("Pear")}>Pear</Checkbox>
-              <Checkbox value="Nokia" onChange={handlefilter} checked={brand.includes("Nokia")}>Nokia</Checkbox>
-              <Checkbox value="Angage" onChange={handlefilter} checked={brand.includes("Angage")}>Angage</Checkbox>
+    <Box pl={3}   w="20%" boxShadow='xs' bg="white" >
+
+      
+         
+          <Box pos="fixed" top={'200'} >
+          <Text display="flex" as="b" fontSize="lg" >Category Filter  <FaFilter size="20px" style={{margin:"auto", marginLeft:"10px"}} color='green' /></Text><br/>
+            <Text display="flex" as="i" fontSize="md">BRANDS<GoDeviceMobile size="20px" style={{margin:"auto", marginLeft:"10px"}} color="green" /> </Text>
+            
+            <Stack  pl={6} mt={1} spacing={1} >
+              <Checkbox colorScheme='green' fontWeight="semibold" color="blue.600" value="MTR" onChange={handlefilter} checked={brand.includes("MTR")}>MTR</Checkbox>
+              <Checkbox colorScheme='green' fontWeight="semibold" color="blue.600" value="Pear" onChange={handlefilter} checked={brand.includes("Pear")}>Pear</Checkbox>
+              <Checkbox colorScheme='green' fontWeight="semibold" color="blue.600"  value="Nokia" onChange={handlefilter} checked={brand.includes("Nokia")}>Nokia</Checkbox>
+              <Checkbox colorScheme='green' fontWeight="semibold" color="blue.600" value="Angage" onChange={handlefilter} checked={brand.includes("Angage")}>Angage</Checkbox>
             </Stack>
           </Box>
         </Box>

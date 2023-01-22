@@ -36,23 +36,31 @@ const Cart = () => {
         <Text ml="40px"  fontSize='3xl' as="b">My Cart</Text>
         <hr/>
         <Box textAlign="center">
-          <Text p="10rem" fontSize="5xl">Cart is Empty!</Text>
+          <Text  p="6rem" fontSize="5xl" fontWeight="semibold">Cart Is Empty 🛒 ☹️</Text>
         </Box>
     </Box>
     )
   }
      return (
-    <Box >
+    <Box pr={8} pl={8} >
       
       <Text ml="40px"    fontSize='3xl' as="b">My Cart</Text>
       <hr/>
-      <Text>You have {cart.length} items in your cart.</Text>
+      <Text fontSize="lg" as="i">You have  <span style={{color:"green", fontSize:"20px", fontWeight:"bold"}} >{cart.length}</span> items in your cart.</Text>
       {cart?.map((el) => <ProductinCart key={el.id} {...el} deletefunc={deletefunc} handlecost={handlecost} />)}
       <hr />
       <Box textAlign="right" p="1rem">
-        <Text fontSize='2xl'>Cart Total : {totalcost}</Text>
-        <Text fontSize="2xs">Inclusive of all the applicable taxes</Text>
-        <Button onClick={() => navigate("/cart/payment")} w="10%" m="1rem 0 1rem 1rem" p="1rem" color="white" bg="#ff7856">Place Order</Button>
+        <Text as="b" fontSize='3xl'>Cart Total : <span style={{color:"green"}} >{totalcost}</span> </Text>
+        <Text mb={3} fontSize="xs">Inclusive of all the applicable taxes</Text>
+        <button  style={{
+              color:"white" ,
+                width:"150px",
+                height:"50px",
+                backgroundColor:"#ff7856",
+                borderRadius:"10px",
+                fontSize:"18px"
+
+            }}   onClick={() => navigate("/cart/payment")} >Place Order</button>
       </Box>
     </Box>
    )

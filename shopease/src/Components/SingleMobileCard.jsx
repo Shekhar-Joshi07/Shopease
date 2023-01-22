@@ -1,4 +1,4 @@
-import { Box, Button, Flex, List, ListIcon, ListItem, Text, UnorderedList } from '@chakra-ui/react';
+import { Box, Flex, List, ListIcon, ListItem, Text, UnorderedList } from '@chakra-ui/react';
 import axios from 'axios';
 import React from 'react'
 import { useEffect } from 'react';
@@ -35,12 +35,12 @@ const SingleMobileCard = () => {
     },[id]);
 
   return (
-    <Box bg={"#eef6f9"} p="2rem">
-      <Flex justifyContent="space-around" alignItems="center" w="91rem"  bg="white">
+    <Box bg={"#eef6f9"} p="2rem" >
+      <Flex  justifyContent="space-around" alignItems="center"  bg="white">
         <Box w="30%">
             <img width="90%" src={mobdata.img_section} alt={mobdata.id} />
         </Box>
-        <Box lineHeight="3rem" bg="white" >
+        <Box lineHeight="3rem" bg="white"  >
             <Text fontSize='3xl'>{mobdata.title}</Text>
             <Text fontSize='xl' color="#4ca8b6" textAlign="left">{mobdata.brand}</Text>
             <Flex gap={2} justifyContent="left" alignItems="center">
@@ -52,9 +52,24 @@ const SingleMobileCard = () => {
               <ListItem>Display Size : 1.8 inches (4.57 cm)</ListItem>
               <ListItem>Warranty Available : Manufacturer Warranty</ListItem>
             </UnorderedList>
-            <Flex gap={5}>
-            <Button onClick={handleAddCard} px="3rem" py="1.5rem" color="#ff7856" colorScheme='#ff7856' variant='outline'>ADD TO CART</Button>
-            <Button px="3rem" py="1.5rem" color="white"  bgColor="#ff7856" variant='solid'>BUY NOW</Button>
+            <Flex  gap={5} >
+            <button style={{
+              color:"#ff7856" ,
+                width:"200px",
+                height:"50px",
+                backgroundColor:"white",
+                borderRadius:"10px",
+                border:"2px solid #ff7856"
+
+            }}  onClick={handleAddCard} >ADD TO CART</button>
+            <button style={{
+              color:"white" ,
+                width:"200px",
+                height:"50px",
+                backgroundColor:"#ff7856",
+                borderRadius:"10px"
+
+            }}>BUY NOW</button>
             </Flex>
             <List>
               <ListItem>
