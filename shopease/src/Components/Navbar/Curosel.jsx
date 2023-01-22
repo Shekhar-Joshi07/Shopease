@@ -37,15 +37,21 @@ const [ind,setIndex]=useState(0);
 }
 ]
 
+useEffect(()=>{
 
-// setInterval(()=>{
-//         if(ind===imgobj.length-1){
-//     setIndex(0);
-//         }else{
-//             setIndex(ind+1);
-//             console.log(ind);
-//         }
-//     },2500);
+    setTimeout(()=>{
+        if(ind===imgobj.length-1){
+    setIndex(0);
+        }
+        else {
+            setIndex(ind+1);
+            console.log("------")
+            console.log(ind);
+        }
+
+        
+    },2000);
+},[ind])
 
    
 

@@ -42,3 +42,55 @@
   border-top-right-radius: 10px;
 
 }
+
+
+
+
+/* media queries */
+
+
+@media all and (min-width:480px) and (max-width:720px) {
+    .curosel{
+        width: 500px;
+        
+        margin: auto;
+        margin-top: 50px;
+        align-items: center;
+        margin-left: 80px;
+    }
+
+    .hoverimage>img{
+        height: 300px;
+        
+    }
+
+
+}
+
+
+
+@media all and (min-width:300px) and (max-width:479px) {
+    .curosel{
+        width: 400px;
+        
+        margin: auto;
+        margin-top: 80px;
+        align-items: center;
+        margin-left: 60px;
+    }
+/*     
+    .hovercontrol{
+        width: 400px;
+    } */
+
+    
+    .hoverimage>img{
+        height: 250px;
+        margin-bottom: 30px;
+        
+    }
+    .hovercontrol>h3{
+        font-size: small;
+    }
+
+}
