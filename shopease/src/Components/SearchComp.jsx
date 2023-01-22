@@ -33,13 +33,12 @@ const SearchComp = () => {
   return (
     <VStack max-width="28rem">
       <HStack spacing="0">
-        <Search2Icon  marginRight={-1} bg="#E9F6F7" />
         <Input value={inputval} onChange={handleChange} placeholder= " What is on your mind today?" size='md' w="40rem" bg="#e9f6f7" />
         <Button onClick={() => navigate("/mobile")} bg='rgb(255,120,86)' px="2rem" color="white" variant='solid'>Search</Button>
       </HStack>
-      <Box w="52rem" maxH="10rem" p="1rem" textAlign='left' overflow="hidden">
+      {/* <Box w="52rem" maxH="10rem" p="1rem" textAlign='left' overflow="hidden">
             {suggestions?.map((item, index)=><div key={index}>{item}</div>)}
-        </Box>
+        </Box> */}
     </VStack>
   )
 }

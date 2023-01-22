@@ -15,6 +15,9 @@ const SingleHomeCard = () => {
     // const handleAddCard = () =>{
     //   navigate("/cart")
     // }
+    const handleCart = () =>{
+      
+    }
 
     useEffect(() =>{
       axios.get(`https://shopease-5vqg.onrender.com/Deals_of_the_Day/${id}`).then((res) =>{
@@ -43,7 +46,7 @@ const SingleHomeCard = () => {
               <ListItem>Warranty Available : Manufacturer Warranty</ListItem>
             </UnorderedList>
             <Flex gap={5}>
-            <Button px="3rem" py="1.5rem" color="#ff7856" colorScheme='#ff7856' variant='outline'>ADD TO CART</Button>
+            <Button onClick={handleCart} px="3rem" py="1.5rem" color="#ff7856" colorScheme='#ff7856' variant='outline'>ADD TO CART</Button>
             <Button px="3rem" py="1.5rem" color="white"  bgColor="#ff7856" variant='solid'>BUY NOW</Button>
             </Flex>
             <List>

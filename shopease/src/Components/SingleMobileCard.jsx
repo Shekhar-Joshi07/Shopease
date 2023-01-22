@@ -3,29 +3,32 @@ import axios from 'axios';
 import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { MdCheckCircle} from "react-icons/md";
+import { useDispatch } from 'react-redux';
+import { getCartData } from '../Redux/CartRedux/action';
 
 const SingleMobileCard = () => {
-  const navigate = useNavigate();
-    const [cartdata, setCartdata] = useState([]);
+  const dispatch = useDispatch();
     const [mobdata, setMobdata] = useState({});
     const { id } = useParams();
     console.log(id);
 
+
     const handleAddCard = () =>{
-      navigate("/cart")
+      axios.get(`https://shopease-5vqg.onrender.com/mobileData/${id}`).then((res) =>{
+        console.log(res.data);
+        dispatch(getCartData(res.data));
+      }).catch((err) =>{
+        console.log("Error Feching Data");
+      })
     }
 
-    console.log(cartdata);
 
     useEffect(() =>{
       axios.get(`https://shopease-5vqg.onrender.com/mobileData/${id}`).then((res) =>{
         console.log(res.data);
         setMobdata(res.data);
-        const newmobdata = [];
-        newmobdata.push(res.data);
-        setCartdata(newmobdata);
       }).catch((err) =>{
         console.log("Error feching Data");
       })
@@ -41,7 +44,7 @@ const SingleMobileCard = () => {
             <Text fontSize='3xl'>{mobdata.title}</Text>
             <Text fontSize='xl' color="#4ca8b6" textAlign="left">{mobdata.brand}</Text>
             <Flex gap={2} justifyContent="left" alignItems="center">
-              <Text as="b" fontSize="2xl">{mobdata.p_price}</Text>
+              <Text as="b" fontSize="2xl">₹{mobdata.p_price}</Text>
               <Text fontSize='md' as="del">{mobdata.old_prices}</Text>
               <Text fontSize="xl" color="#4ca8b6">{mobdata.prd_discount}</Text>
             </Flex>
