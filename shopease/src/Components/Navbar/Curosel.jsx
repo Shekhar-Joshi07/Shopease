@@ -1,6 +1,6 @@
 import React from 'react';
 // import { useEffect } from 'react';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import './Curosel.Module.css';
 
 export const Curosel = () => {
@@ -38,15 +38,21 @@ const [ind,setIndex]=useState(0);
 ]
 
 
-// setInterval(()=>{
-//         if(ind===imgobj.length-1){
-//     setIndex(0);
-//         }else{
-//             setIndex(ind+1);
-//             console.log(ind);
-//         }
-//     },2500);
+ useEffect(()=>{
 
+    setTimeout(()=>{
+        if(ind===imgobj.length-1){
+    setIndex(0);
+        }
+        else {
+            setIndex(ind+1);
+          
+           
+        }
+
+
+    },2000);
+},[ind])
    
 
 
