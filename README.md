@@ -1,6 +1,6 @@
 <h1 align="center" id="title">Shopease</h1>
 
-<p align="center"><img src="https://iili.io/HcHUepe.png" alt="project-image"></p>
+<p align="center"><img src="https://iili.io/HcHUepe.png" alt="project-image" width="220" height="200/"></p>
 
 <p id="description">Shopease is an ecommerce online website for the best products of all categories for the consumer. User can buy products at best deals and offers.<br><br><b>This is a collaborative project of 4 members</b><br><br>- Chandra Shekhar Joshi (Team Lead)<br>- Vikram Navik<br>- Kirpa Shankar Pandey<br>- Harsha Vardhan</p>
 
