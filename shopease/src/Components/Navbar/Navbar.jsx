@@ -41,7 +41,7 @@ export const Navbar = () => {
 
 
   const cart = useSelector((store) =>{
-    console.log(store.cartReducer.cart);
+   
     return store.cartReducer.cart
     })
 
@@ -91,7 +91,7 @@ export const Navbar = () => {
 <Link to="/cart">
   <Flex>
   <IoCartOutline   size={25} color='teal'/>
-  <Text position="relative" left="-0.75rem" top="-0.7rem" bg="#ff7856" borderRadius="7px" p="0.1rem">{cart.length}</Text>
+  <Text mr="-1.3rem" color="white" textAlign="center" width="26px" position="relative" left="-0.65rem" top="-1rem" bg="#ff7856" rounded="full" >{cart.length}</Text>
   </Flex>
 </Link>
 <Signup/>

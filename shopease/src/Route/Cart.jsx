@@ -1,4 +1,4 @@
-import { Box, Button, Text } from '@chakra-ui/react'
+import { Box, Button, Text, } from '@chakra-ui/react'
 import axios from 'axios';
 // import axios from 'axios';
 import React from 'react';
@@ -33,7 +33,7 @@ const Cart = () => {
   if(cart.length==0){
     return (
       <Box>
-        <Text  fontSize='3xl' as="b">My Cart</Text>
+        <Text ml="40px"  fontSize='3xl' as="b">My Cart</Text>
         <hr/>
         <Box textAlign="center">
           <Text p="10rem" fontSize="5xl">Cart is Empty!</Text>
@@ -43,7 +43,8 @@ const Cart = () => {
   }
      return (
     <Box >
-      <Text  fontSize='3xl' as="b">My Cart</Text>
+      
+      <Text ml="40px"    fontSize='3xl' as="b">My Cart</Text>
       <hr/>
       <Text>You have {cart.length} items in your cart.</Text>
       {cart?.map((el) => <ProductinCart key={el.id} {...el} deletefunc={deletefunc} handlecost={handlecost} />)}
