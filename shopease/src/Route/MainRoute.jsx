@@ -5,7 +5,8 @@ import Mobilepage from '../Components/Mobilepage'
 import SingleMobileCard from '../Components/SingleMobileCard'
 import Home from '../Pages/Home'
 import SingleHomeCard from './SingleHomeCard'
-// import Cart from './Cart'
+import Cart from './Cart'
+import Payment from '../Pages/Payment'
 
 const MainRoute = () => {
   return (
@@ -15,7 +16,8 @@ const MainRoute = () => {
             <Route path="/mobile" element={<Mobilepage />} />
             <Route path='/mobile/:id' element={<SingleMobileCard />} /> 
             <Route path="/deal/:id" element={<SingleHomeCard />} />
-            {/* <Route path="/cart" element={<Cart />} /> */}
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/payment" element={<Payment />} />
         </Routes>
     </div>
   )

@@ -2,7 +2,8 @@ import React from 'react';
 // import { FaSistrix } from "react-icons/fa";
 import { IoLocationOutline ,IoNotificationsOutline,IoCartOutline} from "react-icons/io5";
 import {IoMdHeartEmpty} from "react-icons/io"
-import {Box, HStack} from "@chakra-ui/react"
+
+
 import {
   useDisclosure,
   MenuItem ,
@@ -12,6 +13,10 @@ import {
   Image
 } from "@chakra-ui/react"
 import { ChevronDownIcon, ChevronUpIcon } from '@chakra-ui/icons'
+
+import {Box, Text, HStack, Flex} from "@chakra-ui/react"
+
+
 import SearchComp from "../SearchComp"
 // import {Search2Icon  } from '@chakra-ui/icons'
 
@@ -21,6 +26,8 @@ import Signup from '../Signup';
 
 
 import './Navbar.Module.css';
+import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 
 export const Navbar = () => {
@@ -31,14 +38,20 @@ export const Navbar = () => {
   const menu5 = useDisclosure()
   const menu6 = useDisclosure()
  
+
+
+  const cart = useSelector((store) =>{
+    console.log(store.cartReducer.cart);
+    return store.cartReducer.cart
+    })
+
   return (
     <>
     
   <div className='navbar' >
 
 <div>
-<img src="https://iili.io/HcHUepe.png" 
-alt="" />
+<img src="https://iili.io/HcHUepe.png" alt="logo" />
 </div>
 
 
@@ -54,7 +67,7 @@ alt="" />
  
 {/* <FaSistrix /> */}
 {/* <div>
->>>>>>> 44db061b6eff9378ec855128af684f3e1482f14f
+
 
 <Search2Icon  marginRight={3} bg="#E9F6F7"  ml={2}/>
 
@@ -75,7 +88,12 @@ alt="" />
 <IoLocationOutline size={25} color='teal'/>
 <IoNotificationsOutline size={25} color='teal'  />
 <IoMdHeartEmpty color='red' size={25}  />
-<IoCartOutline   size={25} color='teal'/>
+<Link to="/cart">
+  <Flex>
+  <IoCartOutline   size={25} color='teal'/>
+  <Text position="relative" left="-0.75rem" top="-0.7rem" bg="#ff7856" borderRadius="7px" p="0.1rem">{cart.length}</Text>
+  </Flex>
+</Link>
 <Signup/>
 </HStack>
 
