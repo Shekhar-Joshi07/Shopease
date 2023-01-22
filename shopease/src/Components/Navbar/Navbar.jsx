@@ -29,11 +29,13 @@ alt="" />
 
 {/* div for input taking  and search button*/}
 
-<div>
+<Box>
+<SearchComp />
+</Box>
 
 
-  <SearchComp />
-</div>
+  
+
  
 {/* <FaSistrix /> */}
 {/* <div>

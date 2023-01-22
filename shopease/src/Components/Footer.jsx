@@ -34,20 +34,20 @@ const Footer = () => {
    
    >
    <BsShieldCheck style={{margin:"auto", mb:"8px"}} color="#4fb5c4"  size="50px" />
-   <Text color="#777675" fontSize="20px">Great Selection</Text>
+   <Text textAlign="center" mt={2}  color="#777675" fontSize="20px">Great Selection</Text>
    </Box>
    <Box pt="7px" mt="20px"   w="200px" height="120px" 
   
   >
   <TbCurrencyRupee style={{margin:"auto", mb:"8px"}} color="#4fb5c4"  size="50px" />
-  <Text color="#777675" fontSize="20px">Low Price</Text>
+  <Text  textAlign="center" mt={2}  color="#777675" fontSize="20px">Low Price</Text>
   </Box>   
   
   <Box pt="7px" mt="20px"   w="200px" height="120px" 
   
   >
   <AiOutlineShoppingCart style={{margin:"auto", mb:"8px"}} color="#4fb5c4"  size="50px" />
-  <Text color="#777675" fontSize="20px">Speedy Delivery</Text>
+  <Text  textAlign="center" mt={2}  color="#777675" fontSize="20px">Speedy Delivery</Text>
   </Box> 
   
     </Grid>
