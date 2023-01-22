@@ -111,7 +111,9 @@ padding: 13px 5px;
 .subnav3{
     width: 90%;
     height: 30px;
-    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
     border: 1px solid transparent;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
